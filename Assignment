@@ -1,0 +1,26 @@
+// import "./styles.css";
+import {useState} from 'react'
+export default function App() {
+  // Marco Polo Assignment
+  const [state, setState]= useState('Marco')
+  const [btnState, setBtnState] = useState('Polo')
+const toggleHandler =()=>{
+  if(state==='Marco' || btnState==='Polo'){
+    setState('Polo')
+    setBtnState('Marco')
+  }
+  else{
+    setState('Marco')
+    setBtnState('Polo')
+  }
+}
+// YoutubeLiker
+  return (
+    <div className="App">
+      {/* Marco Polo Assignment */}
+      <h1 id='marco-polo'>{state}</h1>
+      <button id="marco-polo-toggler" onClick={toggleHandler}>{btnState}</button>
+      {/* marco */}
+    </div>
+  );
+}
